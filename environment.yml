@@ -1,0 +1,43 @@
+# this should be very similar to https://github.com/conda-forge/naive_cookiecutter-feedstock/blob/master/recipe/meta.yaml
+# run the following command to create a conda environment that is suitable for testing naive_cookiecutter
+# conda env create -f environment.yml
+# conda activate naive_cookiecutter
+# python -m ipykernel install --user --name naive_cookiecutter --display-name naive_cookiecutter
+# and then run this to install naive_cookiecutter in editable mode
+# make editable
+# update using
+# conda env update --name naive_cookiecutter --file environment.yml --prune
+name: naive_cookiecutter
+channels:
+  - conda-forge
+dependencies:
+  # host:
+  - pip
+  - python >=3.8
+  - poetry >=1,<2
+  # run:
+  # run_constrained:
+  - coloredlogs >=14,<16
+  # tests:
+  - coverage
+  - coveralls
+  - pytest
+  # docs:
+  - sphinx
+  - sphinx_bootstrap_theme
+  - sphinxcontrib-apidoc
+  - nbsphinx >=0.8
+  - ipykernel
+  - pantable
+  # dev:
+  - pandoc
+  - isort
+  - mypy
+  - bandit
+  - black
+  - bump2version
+  - ghp-import >=2,<3
+  - nbconvert >=6,<7
+  - pylint
+  - rstcheck
+  - types-pyyaml
