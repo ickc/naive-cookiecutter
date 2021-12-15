@@ -19,10 +19,12 @@ naive_cookiecutter is just a naive cookiecutter to boostrap Python project.
 ```bash
 NEW_NAME=...
 NEW_VERSION=...
+NEW_YEAR=...
 NEW_NAME_UPPER="$(echo $NEW_NAME | tr '[:lower:]' '[:upper:]')"
 find . \! -path '*/.git/*' -type f -exec sed -i "s/naive_cookiecutter/$NEW_NAME/g" {} +
 find . \! -path '*/.git/*' -type f -exec sed -i "s/NAIVE_COOKIECUTTER/$NEW_NAME_UPPER/g" {} +
 find . \! -path '*/.git/*' -type f -exec sed -i "s/0.1.0/$NEW_VERSION/g" {} +
+find . \! -path '*/.git/*' -type f -exec sed -i "s/2021/$NEW_YEAR/g" {} +
 mv src/naive_cookiecutter "src/$NEW_NAME"
 ```
 
@@ -35,7 +37,6 @@ Optionally also sed
 - GitHub username `ickc`
 - author name `Kolen Cheung`
 - author email `christian.kolen@gmail.com`
-- copyright year 2021
 
 # Copy
 
