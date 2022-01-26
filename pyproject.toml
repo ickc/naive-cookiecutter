@@ -45,7 +45,7 @@ python = ">=3.8"
 coloredlogs = { optional = true, version = ">=14,<16" }
 
 # tests
-coverage = { optional = true, version = "*" }
+coverage = { optional = true, version = "^6.3" }
 coveralls = { optional = true, version = "*" }
 pytest = { optional = true, version = "*" }
 
