@@ -39,6 +39,7 @@ Instruction
    find . \! -path '*/.git/*' -type f -exec sed -i "s/0.1.0/$NEW_VERSION/g" {} +
    find . \! -path '*/.git/*' -type f -exec sed -i "s/2021–2022/$NEW_YEAR/g" {} +
    mv src/naive_cookiecutter "src/$NEW_NAME"
+   mv tests/test_naive_cookiecutter.py "tests/test_$NEW_NAME.py"
 
 -  update title in
 
