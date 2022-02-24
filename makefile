@@ -21,6 +21,7 @@ test:
 	rm -f .coverage*
 	coverage run -m pytest -vv $(PYTESTARGS) \
 		tests
+coverage: test
 	coverage combine
 	coverage report
 	coverage html
