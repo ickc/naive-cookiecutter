@@ -38,7 +38,7 @@ NEW_NAME_UPPER="$(echo $NEW_NAME | tr '[:lower:]' '[:upper:]')"
 find . \! -path '*/.git/*' -type f -exec sed -i "s/naive_cookiecutter/$NEW_NAME/g" {} +
 find . \! -path '*/.git/*' -type f -exec sed -i "s/NAIVE_COOKIECUTTER/$NEW_NAME_UPPER/g" {} +
 find . \! -path '*/.git/*' -type f -exec sed -i "s/0.1.0/$NEW_VERSION/g" {} +
-find . \! -path '*/.git/*' -type f -exec sed -i "s/2021/$NEW_YEAR/g" {} +
+find . \! -path '*/.git/*' -type f -exec sed -i "s/2021–2022/$NEW_YEAR/g" {} +
 mv src/naive_cookiecutter "src/$NEW_NAME"
 ```
 

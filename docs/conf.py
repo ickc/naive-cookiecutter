@@ -21,7 +21,7 @@ extensions = [
 source_suffix = ".rst"
 master_doc = "index"
 project = "naive_cookiecutter"
-year = "2021"
+year = "2021–2022"
 author = "Kolen Cheung"
 copyright = f"{year}, {author}"
 version = release = "0.1.0"
