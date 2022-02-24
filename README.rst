@@ -4,27 +4,21 @@
 naive_cookiecutter—just a naive cookiecutter to boostrap Python project
 =======================================================================
 
-:Date:   December 7, 2021
+:Date:   February 24, 2022
 
 .. contents::
    :depth: 3
 ..
 
-+-------------+----------------------------------------------------------------------------------+
-| docs        | |Documentation Status| |image2|                                                  |
-+=============+==================================================================================+
-| tests       | |GitHub Actions| |Coverage Status|                                               |
-|             |                                                                                  |
-|             | |Codacy Code Quality Status| |Scrutinizer Status| |CodeClimate Quality Status|   |
-+-------------+----------------------------------------------------------------------------------+
-| package     | |Supported versions| |Supported implementations| |PyPI Wheel|                    |
-|             |                                                                                  |
-|             | |PyPI Package latest release| |GitHub Releases| |Development Status| |Downloads| |
-|             |                                                                                  |
-|             | |Commits since latest release| |License|                                         |
-+-------------+----------------------------------------------------------------------------------+
-| conda-forge | |Conda Recipe| |Conda Downloads| |Conda Version| |Conda Platforms|               |
-+-------------+----------------------------------------------------------------------------------+
+|Documentation Status| |image1|
+
+|GitHub Actions| |Coverage Status| |image2| |Codacy Code Quality Status| |Scrutinizer Status| |CodeClimate Quality Status|
+
+|Supported versions| |Supported implementations| |PyPI Wheel|
+
+|PyPI Package latest release| |GitHub Releases| |Development Status| |Downloads|
+
+|Commits since latest release| |License|
 
 Introduction
 ============
@@ -37,9 +31,13 @@ Instruction
 .. code:: bash
 
    NEW_NAME=...
+   NEW_VERSION=...
+   NEW_YEAR=...
    NEW_NAME_UPPER="$(echo $NEW_NAME | tr '[:lower:]' '[:upper:]')"
    find . \! -path '*/.git/*' -type f -exec sed -i "s/naive_cookiecutter/$NEW_NAME/g" {} +
    find . \! -path '*/.git/*' -type f -exec sed -i "s/NAIVE_COOKIECUTTER/$NEW_NAME_UPPER/g" {} +
+   find . \! -path '*/.git/*' -type f -exec sed -i "s/0.1.0/$NEW_VERSION/g" {} +
+   find . \! -path '*/.git/*' -type f -exec sed -i "s/2021/$NEW_YEAR/g" {} +
    mv src/naive_cookiecutter "src/$NEW_NAME"
 
 -  update title in
@@ -49,11 +47,9 @@ Instruction
 
 Optionally also sed
 
--  version ``0.1.0``
 -  GitHub username ``ickc``
 -  author name ``Kolen Cheung``
 -  author email ``christian.kolen@gmail.com``
--  copyright year 2021
 
 Copy
 ====
@@ -69,6 +65,8 @@ Copy
 .. |GitHub Actions| image:: https://github.com/ickc/naive_cookiecutter/workflows/Python%20package/badge.svg
 .. |Coverage Status| image:: https://codecov.io/gh/ickc/naive_cookiecutter/branch/master/graphs/badge.svg?branch=master
    :target: https://codecov.io/github/ickc/naive_cookiecutter
+.. |image2| image:: https://coveralls.io/repos/ickc/naive_cookiecutter/badge.svg?branch=master&service=github
+   :target: https://coveralls.io/r/ickc/naive_cookiecutter
 .. |Codacy Code Quality Status| image:: https://img.shields.io/codacy/grade/078ebc537c5747f68c1d4ad3d3594bbf.svg
    :target: https://www.codacy.com/app/ickc/naive_cookiecutter
 .. |Scrutinizer Status| image:: https://img.shields.io/scrutinizer/quality/g/ickc/naive_cookiecutter/master.svg
@@ -92,13 +90,3 @@ Copy
 .. |Commits since latest release| image:: https://img.shields.io/github/commits-since/ickc/naive_cookiecutter/v0.1.0.svg
    :target: https://github.com/ickc/naive_cookiecutter/compare/v0.1.0...master
 .. |License| image:: https://img.shields.io/pypi/l/naive_cookiecutter.svg
-.. |Conda Recipe| image:: https://img.shields.io/badge/recipe-naive_cookiecutter-green.svg
-   :target: https://anaconda.org/conda-forge/naive_cookiecutter
-.. |Conda Downloads| image:: https://img.shields.io/conda/dn/conda-forge/naive_cookiecutter.svg
-   :target: https://anaconda.org/conda-forge/naive_cookiecutter
-.. |Conda Version| image:: https://img.shields.io/conda/vn/conda-forge/naive_cookiecutter.svg
-   :target: https://anaconda.org/conda-forge/naive_cookiecutter
-.. |Conda Platforms| image:: https://img.shields.io/conda/pn/conda-forge/naive_cookiecutter.svg
-   :target: https://anaconda.org/conda-forge/naive_cookiecutter
-.. |image2| image:: https://github.com/ickc/naive_cookiecutter/workflows/GitHub%20Pages/badge.svg
-   :target: https://ickc.github.io/naive_cookiecutter
