@@ -1,5 +1,5 @@
 ---
-title:	naive_cookiecutter—just a naive cookiecutter to boostrap Python project
+title:	naive_cookiecutter—just a naive cookiecutter to bootstrap Python project
 ...
 
 [![Documentation Status](https://readthedocs.org/projects/naive_cookiecutter/badge/?version=latest)](https://naive_cookiecutter.readthedocs.io/en/latest/?badge=latest&style=plastic)
@@ -26,7 +26,7 @@ title:	naive_cookiecutter—just a naive cookiecutter to boostrap Python project
 
 # Introduction
 
-naive_cookiecutter is just a naive cookiecutter to boostrap Python project.
+naive_cookiecutter is just a naive cookiecutter to bootstrap Python project.
 
 # Instruction
 
